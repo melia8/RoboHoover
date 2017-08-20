@@ -1,5 +1,11 @@
 package com.melia.yoti.robohoover;
 
+/**
+ *
+ * Class that embodies a RobotHoover implementation for the Yoti test
+ *
+ * @Author Paul Melia
+ */
 public class YotiRoboHoover implements RoboHoover {
     private int[] initialCoord;
     private int[] coord;
@@ -50,7 +56,7 @@ public class YotiRoboHoover implements RoboHoover {
     }
 
     public void move() {
-        switch(getNextInstruction()) {
+        switch (getNextInstruction()) {
             case 'E':
                 moveEast();
                 break;

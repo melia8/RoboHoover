@@ -6,7 +6,8 @@ public class YotiOutput {
     int[] coords;
     int patches;
 
-    public YotiOutput() { }
+    public YotiOutput() {
+    }
 
     public YotiOutput(int[] coords, int patches) {
         this.coords = coords;
@@ -14,10 +15,12 @@ public class YotiOutput {
     }
 
     public int[] getCoords() {
-        return coords; }
+        return coords;
+    }
 
     public int getPatches() {
-        return patches; }
+        return patches;
+    }
 
     @Override
     public String toString() {

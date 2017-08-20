@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.melia.yoti.robohoover.models.RoombaAudit;
 import com.melia.yoti.robohoover.models.YotiInput;
 import com.melia.yoti.robohoover.models.YotiOutput;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +26,7 @@ public class RoombaRepoTest {
     RoombaRepo roombaRepo;
 
     @Before
-    public void clear_audit_records_before_each_test(){
+    public void clear_audit_records_before_each_test() {
         roombaRepo.deleteAll();
     }
 
@@ -61,7 +62,7 @@ public class RoombaRepoTest {
 
         List<String> jsonResultList = new ArrayList();
 
-        for (RoombaAudit roombaAudit : roombaRepo.findAll()){
+        for (RoombaAudit roombaAudit : roombaRepo.findAll()) {
             jsonResultList.add(objectMapper.writeValueAsString(roombaAudit));
         }
 

@@ -1,7 +1,6 @@
 package com.melia.yoti.robohoover;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.melia.yoti.robohoover.models.YotiInput;
 import com.melia.yoti.robohoover.models.YotiOutput;
 import com.melia.yoti.robohoover.repos.RoombaRepo;
 import org.junit.Test;
