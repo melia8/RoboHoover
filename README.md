@@ -18,7 +18,7 @@ clone the repo and issue the following command from the root folder of the appli
 
 you should now be able to reach the POST endpoint: `localhost:8080/cleanRoom`
 
-Use a client like [PostMan](https://www.getpostman.com/) to POST your input json payload
+Use a client like [PostMan](https://www.getpostman.com/) to POST your input json payload, and see the response json
 
 To check the database audit you need to open a terminal window and start the mongo client with the command: `mongo`
 
