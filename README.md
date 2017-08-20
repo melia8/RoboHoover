@@ -4,6 +4,8 @@ Code which implements the Robot Hoover test specified [here](https://github.com/
 
 The program requires that you have a mongo db running on the default port.
 
+To build it on your machine you also need the Java 1.8 JDK installed
+
 ### Installing The Database
 If you are using a mac you can install it using:
 `brew install mongodb`
