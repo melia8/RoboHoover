@@ -140,6 +140,14 @@ public class RoombaServiceTest {
     }
 
     @Test
+    public void setting_duplicate_patches_makes_no_difference_to_count() throws IOException {
+        String input = "{  \"roomSize\" : [5, 1],  \"coords\" : [0, 0],  \"patches\" : [ [2, 0], [4, 0], [4, 0], [2, 0] ],  \"instructions\" : \"SSWWNWSENWEEEES\"}";
+        YotiOutput output = roombaService.getOutput(strToYotiInput(input));
+
+        assertThat(output).isEqualTo(strToYotiOutput("{\"coords\":[4,0],\"patches\":2}"));
+    }
+
+    @Test
     public void audit_records_should_be_saved_by_the_repository() throws IOException {
         Mockito.reset(roombaRepo);
 
