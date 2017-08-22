@@ -1,9 +1,6 @@
 package com.melia.yoti.robohoover.services;
 
-import com.melia.yoti.robohoover.Cleanable;
-import com.melia.yoti.robohoover.HooverableRoom;
-import com.melia.yoti.robohoover.Room;
-import com.melia.yoti.robohoover.YotiRoboHoover;
+import com.melia.yoti.robohoover.*;
 import com.melia.yoti.robohoover.models.RoombaAudit;
 import com.melia.yoti.robohoover.models.Square;
 import com.melia.yoti.robohoover.models.YotiInput;
@@ -45,7 +42,7 @@ public class RoombaServiceImpl implements RoombaService {
      * @return a new instance of the YotiOutput class with the result
      */
     private YotiOutput performClean(YotiInput yotiInput) {
-        YotiRoboHoover roboHoover = new YotiRoboHoover(yotiInput.getCoords(), yotiInput.getInstructions(), yotiInput.getRoomSize());
+        RoboHoover roboHoover = new YotiRoboHoover(yotiInput.getCoords(), yotiInput.getInstructions(), yotiInput.getRoomSize());
         Cleanable yotiRoom = new HooverableRoom(yotiInput.getRoomSize(), yotiInput.getPatches(),roboHoover);
         int numberCleaned = yotiRoom.clean();
         return new YotiOutput(roboHoover.getCoord(), numberCleaned);
