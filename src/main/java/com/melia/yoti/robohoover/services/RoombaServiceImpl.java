@@ -47,7 +47,7 @@ public class RoombaServiceImpl implements RoombaService {
     private YotiOutput performClean(YotiInput yotiInput) {
         YotiRoboHoover roboHoover = new YotiRoboHoover(yotiInput.getCoords(), yotiInput.getInstructions(), yotiInput.getRoomSize());
         Cleanable yotiRoom = new HooverableRoom(yotiInput.getRoomSize(), yotiInput.getPatches(),roboHoover);
-
-        return new YotiOutput(roboHoover.getCoord(), yotiRoom.clean());
+        int numberCleaned = yotiRoom.clean();
+        return new YotiOutput(roboHoover.getCoord(), numberCleaned);
     }
 }
