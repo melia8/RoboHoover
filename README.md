@@ -4,6 +4,8 @@ Code which implements the Robot Hoover test specified [here](https://github.com/
 
 The program requires that you have a mongo db running on the default port.
 
+To build it on your machine you also need the Java 1.8 JDK installed
+
 ### Installing The Database
 If you are using a mac you can install it using:
 `brew install mongodb`
@@ -18,7 +20,7 @@ clone the repo and issue the following command from the root folder of the appli
 
 you should now be able to reach the POST endpoint: `localhost:8080/cleanRoom`
 
-Use a client like [PostMan](https://www.getpostman.com/) to POST your input json payload
+Use a client like [PostMan](https://www.getpostman.com/) to POST your input json payload, and see the response json
 
 To check the database audit you need to open a terminal window and start the mongo client with the command: `mongo`
 
